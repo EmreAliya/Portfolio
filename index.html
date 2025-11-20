@@ -298,6 +298,139 @@ html{scroll-behavior:smooth}
   }
 }
 
+  /* === Discovery card styles === */
+
+.card {
+  position: relative;
+  border-radius: 22px;
+  padding: 24px 22px 26px;
+  background: linear-gradient(135deg, rgba(15,23,42,0.82), rgba(15,23,42,0.78));
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  overflow: hidden;
+}
+
+.card-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(79, 70, 229, 0.35), transparent 55%),
+    radial-gradient(circle at 100% 0%, rgba(56,189,248,0.19), transparent 55%);
+  opacity: 0.65;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(15,23,42,0.75);
+  border: 1px solid rgba(148,163,184,0.55);
+  margin-bottom: 10px;
+  font-size: 0.78rem;
+  color: #9ca3af;
+}
+
+.pill-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #4f46e5;
+  box-shadow: 0 0 10px rgba(79,70,229,0.9);
+}
+
+.header-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.header-main h2 {
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+}
+
+.header-main p {
+  font-size: 0.95rem;
+  color: #9ca3af;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 22px;
+}
+
+@media (max-width: 720px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.section-note {
+  font-size: 0.86rem;
+  color: #9ca3af;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+ul li::before {
+  content: "•";
+  color: #4f46e5;
+  margin-top: 1px;
+  font-size: 1.1em;
+}
+
+.stacked {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.experience-box {
+  margin-top: 16px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(148,163,184,0.55);
+  background: radial-gradient(circle at 0 0, rgba(52,211,153,0.12), transparent 55%);
+  font-size: 0.9rem;
+}
+
+
 
 </style>
 </head>
@@ -692,6 +825,7 @@ html{scroll-behavior:smooth}
 </script>
 </body>
 </html>
+
 
 
 
